@@ -1,4 +1,5 @@
-import "./index.css";
+import "../index.css";
+import { Link } from "react-router-dom";
 
 function App(){
  return(
@@ -115,23 +116,23 @@ function Main(){
 function Footer(){
   return(
     <div className="card position-fixed bottom-0 w-100 z-1">
-      <div className="card-body d-flex justify-content-around text-secondary">
-        <div className="d-flex flex-column justify-content-center align-items-center text-center">
+      <div className="card-body d-flex justify-content-around">
+        <Link to='/' className="d-flex flex-column justify-content-center align-items-center text-center text-secondary text-decoration-none">
           <Button icon="bi bi-house-door-fill" onClick={() => {}}/>
           <h6>Beranda</h6>
-        </div>
-        <div className="d-flex flex-column justify-content-center align-items-center text-center">
+        </Link>
+        <Link to="/Promo" className="d-flex flex-column justify-content-center align-items-center text-center text-secondary text-decoration-none">
           <Button icon="bi bi-circle-fill" onClick={() => {}}/>
           <h6>Promo</h6>
-        </div>
-        <div className="d-flex flex-column justify-content-center align-items-center text-center">
+        </Link>
+        <Link to='/Pesanan' className="d-flex flex-column justify-content-center align-items-center text-center text-secondary text-decoration-none">
           <Button icon="bi bi-clipboard-data-fill" onClick={() => {}}/>
           <h6>Pesanan</h6>  
-        </div>
-        <div className="d-flex flex-column justify-content-center align-items-center text-center">
+        </Link>
+        <Link to='/Chat' className="d-flex flex-column justify-content-center align-items-center text-center text-secondary text-decoration-none">
           <Button icon="bi bi-chat-square-text-fill" onClick={() => {}}/>
           <h6>Chat</h6>
-        </div>
+        </Link>
       </div>
     </div>
   )
